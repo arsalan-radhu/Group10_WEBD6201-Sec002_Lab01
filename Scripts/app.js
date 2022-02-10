@@ -8,11 +8,12 @@
 
         // Variable for text content to be displayed on page
         let paragraph1 = [`This webpage was created by Arsalan Arif Radhu and\n
-                    Sanjivkumar Patel for the WEBD6201 for the Winter 2022 Semester\.\n
+                    Sanjivkumar Patel for the WEBD6201 for the Winter 2022 Semester for WEBD6201\.\n
                     This website demonstrates the use of DOM Manipulation for Lab 1
                     \!\n It will be updated as the semester goes on and we are going to add more features
-                    to this website, so please be on a look put for that\.`];
-        let pageHeader = `Welcome Message:`;
+                    to this website, so please be on a lookout for that\. The picture below was taken
+                    by me and is from my hometown which I am very proud of.`];
+        let pageHeader = `<b>Welcome Message</b>`;
         let titlePage = `Group 10 - Lab 1 Site`;
 
         console.log("Home Page");
@@ -162,7 +163,7 @@
         let title = `<u>Our Projects</u>`;
         let heading1 = `<b>Arsalan Arif Radhu - Projects:</b>`;
         let heading2 = `<b>Sanjivkumar Patel - Projects:</b>`;
-        let paragraph1 = ['hello'];
+        let paragraph1 = ['<u><b>Radhu Company Website</b></u>','<u><b>Infection Tracker</b></u>'];
         let paragraph2 = ['<u><b>Incorporeal Inc</b></u>',
       '<u><b>Hourly Payroll</b></u> '];
 
