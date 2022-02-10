@@ -2,6 +2,8 @@
 
 body {
    background-color: rgba(9,121,105);
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bolder;
 }
 
 p {
@@ -14,13 +16,13 @@ main {
 
 div.container {
    width: 100%;
-   background-color: aliceblue;
+   background-color: rgb(40, 170, 142);
    border:5%;
    padding: 20px;
    opacity: 0.7;
    box-shadow: 0 4px 8px rgba(19, 18, 14, 0.945), 0 6px 20px 0 rgba(19, 18, 14, 0.19);
    border: 1px;
-   border-style: dashed;
+   border-style: solid;
    border-color: black;
 }
 
@@ -39,7 +41,7 @@ div.container {
 .col-about {
    background-color: rgba(158, 132, 182, 0.425);
    border: 1px;
-   border-style: dashed;
+   border-style: solid;
    border-color: black;
 }
 
@@ -70,17 +72,17 @@ img {
 }
 
 #site-img {
-   max-width: 60%;
+   max-width: 90%;
    max-height: 50%;
 }
 
-#will_portrait {
+#sanjiv_portrait {
    max-width: 200px;
    max-height: 300px;
    margin: 20px;
 }
 
-#ivan_portrait {
+#arsalan_portrait {
    max-width: 200px;
    max-height: 300px;
    margin: 20px;
@@ -89,6 +91,7 @@ img {
 h1 {
    margin: 15px;
    text-align: center;
+   font-weight: 800;
 }
 
 h3 {
@@ -100,15 +103,15 @@ a {
 }
 
 a:link {
-   color: rgb(67, 46, 255);
+   color: rgb(17, 97, 189);
 }
 
 a:visited {
-   color:rgb(80, 24, 94);
+   color:rgb(10, 245, 88);
 }
 
 a:hover {
-   color: yellow;
+   color: rgb(8, 8, 8);
 }
 
 
