@@ -5,7 +5,9 @@ body {
    font-family:'Courier New', Courier, monospace;
    font-weight: bolder;
 }
-
+ul{
+   list-style-type: none;
+}
 p {
    text-align: left;
 }
@@ -86,6 +88,12 @@ img {
    max-width: 200px;
    max-height: 300px;
    margin: 20px;
+}
+#project_picture{
+   max-width: 400px;
+   max-height: 300px;
+   margin: 20px;
+   float: left;
 }
 
 h1 {

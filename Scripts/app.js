@@ -51,7 +51,7 @@
     {
         console.log("Services Page");
 
-        ServiceContent();
+        Services();
 
     }
 
@@ -68,7 +68,7 @@
         console.log("Human Resources Page");
 
         let title = `Human Resources`;
-        let message = `This page is under construction!`;
+        let message = `Upcoming!`;
         let ContentBody = document.body.getElementsByClassName("container")[0];
 
         let text1 = document.createElement('p');
@@ -158,22 +158,16 @@
         NavList.innerHTML = NewNavOption;
         NavContents.after(NavList);
         
-        // For testing - Check if html element is inserted
-        // console.log(NavList);
     }
 
     function ProjectsContent()
     {
 
-        let title = `Our Favourite Projects`;
-        let heading1 = `Ivan Mokrooussov - Projects:`;
-        let heading2 = `Will Estanislao - Projects:`;
-        let heading3 = `Project Screenshots:`;
-        let paragraph1 = ['Creating File Text Editor - Visual Studio 2019.', 'FormAwesomness - A simple application with disappear button', 
-                            'EntityFramework - Retriving data from local database, migration and following convertion this data into entities objects'];
-        let paragraph2 = ['Draw A Square - An application that lets you draw squares', 
-                        'Numbers Guessing Game - A simple guessing game coded in C#', 
-                        'Quiz Game - A quiz game programmed in Turing. It had approximately 10 random trivia questions and music\!\nUnfortunately this game has been lost to time.'];
+        let title = `<u>Our Projects</u>`;
+        let heading1 = `Arsalan Arif Radhu - Projects:`;
+        let heading2 = `Sanjivkumar Patel - Projects:`;
+        let paragraph1 = ['hello'];
+        let paragraph2 = ['helo'];
 
         // Select an element to find a position in the document
         let contentBody = document.body.getElementsByClassName('container')[0];
@@ -181,11 +175,11 @@
         let div2 = document.body.getElementsByClassName('list')[1];
         
         // Create the ul that will contain the first set of projects listed
-        let ProjectSet1 = document.createElement("ul");
+        let ProjectSet1 = document.createElement("ol");
         ProjectSet1.setAttribute("class", "list-1");
 
         // Create ul that will contain second set of projects
-        let ProjectSet2 = document.createElement("ul");
+        let ProjectSet2 = document.createElement("ol");
         ProjectSet2.setAttribute("class", "list-1");
         
         // Loop to set Text
@@ -201,31 +195,84 @@
         SetHeading(heading2, div2);
     }
 
-    function ServiceContent()
+    function Services()
     {
-        let ContentBody = document.body.getElementsByClassName('photos')[0];
-        let headingContent = document.body.getElementsByClassName('container')[0];
+      // Store array of services
+      let sanjivServices = [
+        {
+          serviceType: "Web Development",
+          name: "Sanjivkumar Patel",
+          image: "./Assets/webdev.jpeg",
+          content: "Help improve your businesses online presence with a new, customized website."
+        },
+        {
+          serviceType: "Web Design",
+          name: "Sanjivkumar Patel",
+          image: "./Assets/design.jpeg",
+          content: "Interested in a new look for your brand? Sanjiv has the design skills to create a new brand profile.",  
+        },
+        {
+          serviceType: "Copywriting",
+          name: "Sanjivkumar Patel",
+          content: "Worried about your spelling and grammar? Let our in-house copywriters create polished content.", 
+          image: "./Assets/copywriting.jpeg",
+        },
+      ];
 
-        let pageTitle =  `Our Services`;
-        let headerTitle = `The Best of Our Skills`;
-        let paragraph1 = ['Expertise in Web Design Techniques', 'Proficiency In Programming Languages', 
-                        'Photography'];
+      let arsalanServices = [
+        {
+          serviceType: "Software Development",
+          name: "Arsalan Arif Radhu",
+          image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          content: "Have an idea for an app or website? Reach out to us and we can give you a quote on it!" 
+        },
+        {
+          serviceType: "Application Support",
+          name: "Arsalan Arif Radhu",
+          image: "https://images.pexels.com/photos/4560083/pexels-photo-4560083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          content: "Already have a system in place, but don't know how (or don't have time!) to keep it updated? \
+                    After some information collection about the system, we'll be able to help you keep it in check!" 
+        },
+        {
+          serviceType: "System Development Lifecycle",
+          name: "Arsalan Arif Radhu",
+          image: "https://ak.picdn.net/shutterstock/videos/1020779143/thumb/11.jpg",
+          content: "Have a system that you want to build but don't know where to start? Don't worry! With continued communication \
+                    we will help to walk you through the life-cycle as well as building your dream project!" 
+        },
+      ];
+      
+      // Create container to store services cards
+      let containerOne = document.querySelector(".container");
+      let servicesContainer = document.createElement("div");
+      servicesContainer.classList += "container mx-auto row g-lg-3 mb-5 justify-content-center services mb-3";
+      containerOne.after(servicesContainer);
 
-        
+      // Empty string to store HTML containing services cards
+      let servicesHTML = "";
 
-        // Create the element
-        let ProjectSet1 = document.createElement("ul");
-        ProjectSet1.setAttribute("class", "list-1");
-        
+      /**
+       * displayServiceCards - renders an array of project objects into DOM
+       * @param {Array} services
+       */
+      function displayServiceCards(services) {
+        services.forEach(service => {
+          const { name,serviceType, image, content } = service;
+          servicesHTML += `
+            <div class="card text-center col-md-5 col-lg-3 p-4 mb-5 mx-2">
+              <h4>${serviceType}</h4>
+              <h6>${name}</h6>
+              <p>${content}</p>
+              <img src="${image}" class="mx-auto services-img mb-3" />
+            </div>
+          `;
+        });
+      }  
+      
+      // Call displayServiceCards function to render HTML for all project cards
+      displayServiceCards([...sanjivServices, ...arsalanServices]);
 
-        list = SetTextLoop(paragraph1);
-
-        ProjectSet1.innerHTML = list;
-        ContentBody.insertAdjacentElement("beforebegin", ProjectSet1);
-
-        SetTitle(pageTitle, headingContent)
-        SetHeading(headerTitle, headingContent);
-
+      document.querySelector('.services').innerHTML += servicesHTML;
     }
 
     function AboutContent()
