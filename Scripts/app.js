@@ -164,10 +164,11 @@
     {
 
         let title = `<u>Our Projects</u>`;
-        let heading1 = `Arsalan Arif Radhu - Projects:`;
-        let heading2 = `Sanjivkumar Patel - Projects:`;
+        let heading1 = `<b>Arsalan Arif Radhu - Projects:</b>`;
+        let heading2 = `<b>Sanjivkumar Patel - Projects:</b>`;
         let paragraph1 = ['hello'];
-        let paragraph2 = ['helo'];
+        let paragraph2 = ['<u><b>Incorporeal Inc</b></u>',
+      '<u><b>Hourly Payroll</b></u> '];
 
         // Select an element to find a position in the document
         let contentBody = document.body.getElementsByClassName('container')[0];
@@ -202,20 +203,20 @@
         {
           serviceType: "Web Development",
           name: "Sanjivkumar Patel",
-          image: "./Assets/webdev.jpeg",
+          image: "https://i0.wp.com/worldstudyportal.com/wp-content/uploads/2022/01/free-web-development-courses.jpg?fit=1024%2C784&ssl=1",
           content: "Help improve your businesses online presence with a new, customized website."
         },
         {
           serviceType: "Web Design",
           name: "Sanjivkumar Patel",
-          image: "./Assets/design.jpeg",
+          image: "https://fullblastcreative.ca/wp-content/uploads/2017/02/2016-09-22-1474505349-8662319-WebDesign.jpg",
           content: "Interested in a new look for your brand? Sanjiv has the design skills to create a new brand profile.",  
         },
         {
-          serviceType: "Copywriting",
+          serviceType: "Hardware Solutions",
           name: "Sanjivkumar Patel",
-          content: "Worried about your spelling and grammar? Let our in-house copywriters create polished content.", 
-          image: "./Assets/copywriting.jpeg",
+          content: "Need a hand to help build your own customised PC? Let our in-house hardware specialist help you achieve your vision.", 
+          image: "https://cdn.vox-cdn.com/thumbor/XjF_6VkpHEdzcVxZLL8FR1QgPzc=/0x0:2040x1360/1720x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/12793573/akrales_180824_2838_0138.jpg",
         },
       ];
 
@@ -224,19 +225,20 @@
           serviceType: "Software Development",
           name: "Arsalan Arif Radhu",
           image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          content: "Have an idea for an app or website? Reach out to us and we can give you a quote on it!" 
+          content: "Have an idea for an app or website? Reach out to us and we \
+          can give you a quote on it!" 
         },
         {
-          serviceType: "Application Support",
+          serviceType: "Database Solution",
           name: "Arsalan Arif Radhu",
           image: "https://images.pexels.com/photos/4560083/pexels-photo-4560083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          content: "Already have a system in place, but don't know how (or don't have time!) to keep it updated? \
-                    After some information collection about the system, we'll be able to help you keep it in check!" 
+          content: "Need help managing your database? We provide database solutions\
+           to help boost your productivity and compatibility in the market place." 
         },
         {
           serviceType: "System Development Lifecycle",
           name: "Arsalan Arif Radhu",
-          image: "https://ak.picdn.net/shutterstock/videos/1020779143/thumb/11.jpg",
+          image: "https://blog.bydrec.com/hubfs/6%20Benefits%20of%20a%20Systems%20Development%20Life%20Cycle.jpg",
           content: "Have a system that you want to build but don't know where to start? Don't worry! With continued communication \
                     we will help to walk you through the life-cycle as well as building your dream project!" 
         },
@@ -277,23 +279,29 @@
 
     function AboutContent()
     {
-        let Title = `About Us`;
+        let Title = `<u>About Us</u>`;
         let MainContent = document.body.getElementsByClassName("container")[0];
         // Find element opening to start inserting from - Student id and name
         let ContentBody = document.body.getElementsByTagName('img')[0];
         let ContentBody2 = document.body.getElementsByTagName('img')[1];
         let student1 = ['Arsalan Arif Radhu', 'StudentID: 100813965'];
-        let student2 = ['Sanjivkumar Patel', 'StudentID: '];
+        let student2 = ['Sanjivkumar Patel', 'StudentID: 100575645'];
 
         // About content to be inserted
         let paragraph1 = `<p>\nHello, I am Arsalan Arif Radhu. I am currently pursuing Computer Programming and Analysis
         Advanced Diploma from Durham College\. I am a full-time student, currently working a part-time job at a restaurant\.
         I am looking for Co-op opportunitites for this Summer and hope to get an opportunity to work
         in the Data Analysis field\.</p>`;
-        let paragraph2 = `<p></p>`;
+        let paragraph2 = `<p>\nHello My name is Sanjivkumar Patel, Currently I am 
+        enrolled in fourth semester in Computer Programming and Analyst at Durham 
+        College, I am learning Computer Programming because of my best interest 
+        developing a career in Web Development and Data Analyst, I am also working
+         on making my own game console project as my part time hobby\. I am also 
+         looking for an internship or a co-op opportunity to gain experience and 
+         make my future bright going forward\.</p>`;
 
         // Resume link
-        let sanjivResume = `<a href="/Assets/">Check Out My Resume Here!</a>`;
+        let sanjivResume = `<a href="/Assets/SanjivResume.pdf">My Resume!</a>`;
         let arsalanResume = `<a href="/Assets/ArsalanResume.pdf"> My Resume! </a>`;
 
         // Create the element
