@@ -1,5 +1,7 @@
 // IIFE -- Immediately Invoked Function Expression
 // AKA -- Anonymous Self-Executing Function
+//@author: Arsalan Arif Radhu Radhu (100813965) and Sanjivkumar Patel (100575645)
+//@date: 9 February 2021
 
 (function()
 {
