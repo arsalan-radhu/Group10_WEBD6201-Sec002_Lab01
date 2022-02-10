@@ -22,7 +22,6 @@
             location.href = "about.html";
         });
 
-
         let MainContent = document.body.getElementsByClassName('container')[0];
         let ImgContent = document.body.getElementsByTagName('img')[0];
 
@@ -90,15 +89,12 @@
         let customerMessage = document.getElementById("message").value;
         sendButton.addEventListener("click", function(event)
         {
-
             console.log("Full Name:"+fullName);
             console.log("Contact Number:"+contactNumber);
             console.log("Email Address:"+emailAddress);
             console.log("Message:"+customerMessage);
         });
     }
-
-
 
     // named function option
     function Start()
@@ -301,8 +297,8 @@
          make my future bright going forward\.</p>`;
 
         // Resume link
-        let sanjivResume = `<a href="/Assets/SanjivResume.pdf">My Resume!</a>`;
-        let arsalanResume = `<a href="/Assets/ArsalanResume.pdf"> My Resume! </a>`;
+        let sanjivResume = `<a id="resume" href="/Assets/SanjivResume.pdf">My Resume!</a>`;
+        let arsalanResume = `<a id="resume" href="/Assets/ArsalanResume.pdf"> My Resume! </a>`;
 
         // Create the element
         let ProjectSet1 = document.createElement("ul");
