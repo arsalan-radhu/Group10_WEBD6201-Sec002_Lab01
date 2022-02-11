@@ -86,17 +86,16 @@
         console.log("Contact Page");
 
         let sendButton = document.getElementById("sendButton");
-        let fullName = document.getElementById("fullName").value;
-        let contactNumber = document.getElementById("contactNumber").value;
-        let emailAddress = document.getElementById("emailAddress").value;
-        let customerMessage = document.getElementById("message").value;
+        var fullName = document.getElementById("fullName").value;
+        var contactNumber = document.getElementById("contactNumber").value;
+        var emailAddress = document.getElementById("emailAddress").value;
+        var customerMessage = document.getElementById("message").value;
+        var consoleMessage = "Name: " + fullName + "\nContact Number: " + contactNumber
+    + "\nEmail Address: " + emailAddress + "\nComments: " + customerMessage;
         sendButton.addEventListener("click", function()
         {
           setTimeout(function(){ window.location = '../index.html'},3000);  
-          console.log("Full Name:"+fullName);
-            console.log("Contact Number:"+contactNumber);
-            console.log("Email Address:"+emailAddress);
-            console.log("Message:"+customerMessage);
+          console.log(consoleMessage);
             
         });
     }
