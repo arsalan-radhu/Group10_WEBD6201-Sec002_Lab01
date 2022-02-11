@@ -90,12 +90,14 @@
         let contactNumber = document.getElementById("contactNumber").value;
         let emailAddress = document.getElementById("emailAddress").value;
         let customerMessage = document.getElementById("message").value;
-        sendButton.addEventListener("click", function(event)
+        sendButton.addEventListener("click", function()
         {
-            console.log("Full Name:"+fullName);
+          setTimeout(function(){ window.location = '../index.html'},3000);  
+          console.log("Full Name:"+fullName);
             console.log("Contact Number:"+contactNumber);
             console.log("Email Address:"+emailAddress);
             console.log("Message:"+customerMessage);
+            
         });
     }
 
